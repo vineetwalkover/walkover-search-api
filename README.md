@@ -14,10 +14,10 @@ searchClient = new searchEngine.WalkoverSearch(<apiKey>)
 ```
 
 ### Create Index
-syntax: searchClient.addIndex(<name>, <type>, <callback function>)
-note: 
-  1) type can be Simple_Search or Ecommerce
-  2) name should be in lowercase letters
+syntax: searchClient.addIndex(name, type, callbackFunction)<br>
+note: <br>
+  1) type can be Simple_Search or Ecommerce<br>
+  2) name should be in lowercase letters<br>
 ```
 searchClient.addIndex('test', 'Simple_Search', function(data) {
     console.log(data)
@@ -25,15 +25,15 @@ searchClient.addIndex('test', 'Simple_Search', function(data) {
 ```
 
 ### Add Data
-first initialize index
-syntax: searchClient.initIndex(<name>)
+first initialize index<br>
+syntax: searchClient.initIndex(name)<br>
 ```
 searchClient.initIndex('test')
 ```
 
 #### Method 1) addObject:
-syntax: searchClient.addObject(<object>, <callback function>)
-object should be a dictionary
+syntax: searchClient.addObject(object, callbackFunction)<br>
+object should be a dictionary<br>
 ```
 object = {
     "objectID": "1",
@@ -45,11 +45,11 @@ searchClient.addObject(object, function(data){
     console.log(data)
 })
 ```
-note: objectId will be created if not provided, but it is recommended to provide one
+note: objectId will be created if not provided, but it is recommended to provide one<br>
 
 #### Method 2) addObjects:
-syntax: searchClient.addObjects(<objects>, <callback function>)
-objects should be a list of dictionary
+syntax: searchClient.addObjects(objects, callbackFunction)<br>
+objects should be a list of dictionary<br>
 ```
 
 objects = [
@@ -71,11 +71,11 @@ searchClient.addObjects(objects, function(data) {
 ```
 
 ### Delete Data
-first initialize index
+first initialize index<br>
 ```
 searchClient.initIndex('test')
 ```
-method: deleteObject(<objectID>, <callback function>)
+method: deleteObject(objectID, callbackFunction)
 
 ```
 searchClient.deleteObject(1, function(data) {
