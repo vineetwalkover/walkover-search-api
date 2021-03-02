@@ -217,7 +217,7 @@ class WalkoverSearch {
         var jsonData = parameters
         var options = {
             'method': 'POST',
-            'url': url+'/event/'+this.indexName+'?type='+type+'&API_KEY='+this.apiKey,
+            'url': this.path+'/event/'+this.indexName+'?type='+type+'&API_KEY='+this.apiKey,
             'headers': {
               'Content-Type': 'application/json'
             },
