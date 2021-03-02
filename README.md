@@ -14,7 +14,7 @@ searchClient = new searchEngine.WalkoverSearch(<apiKey>)
 ```
 
 ### Create Index
-syntax: searchClient.addIndex(name, type, callback function)<br>
+syntax: searchClient.addIndex(name, type, callbackFunction)<br>
 note: <br>
   1) type can be Simple_Search or Ecommerce<br>
   2) name should be in lowercase letters<br>
@@ -32,7 +32,7 @@ searchClient.initIndex('test')
 ```
 
 #### Method 1) addObject:
-syntax: searchClient.addObject(object, callback function)<br>
+syntax: searchClient.addObject(object, callbackFunction)<br>
 object should be a dictionary<br>
 ```
 object = {
@@ -48,7 +48,7 @@ searchClient.addObject(object, function(data){
 note: objectId will be created if not provided, but it is recommended to provide one<br>
 
 #### Method 2) addObjects:
-syntax: searchClient.addObjects(objects, callback function)<br>
+syntax: searchClient.addObjects(objects, callbackFunction)<br>
 objects should be a list of dictionary<br>
 ```
 
@@ -75,7 +75,7 @@ first initialize index<br>
 ```
 searchClient.initIndex('test')
 ```
-method: deleteObject(objectID, callback function)
+method: deleteObject(objectID, callbackFunction)
 
 ```
 searchClient.deleteObject(1, function(data) {
