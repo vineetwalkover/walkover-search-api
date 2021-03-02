@@ -3,7 +3,7 @@ const request = require('request');
 class WalkoverSearch {
     constructor(apiKey) {
         this.apiKey = apiKey 
-        this.path = 'http://127.0.0.1:5000/'
+        this.path = 'https://search-engine-walkover.el.r.appspot.com/'
     }
 
     initIndex(indexName) {
