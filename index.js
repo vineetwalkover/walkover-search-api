@@ -160,7 +160,7 @@ class WalkoverSearch {
         }
         var options = {
             'method': 'DELETE',
-            'url': this.path+'delete/'+this.indexName+'?objectID='+objectId+'&API_KEY='+this.apiKey,
+            'url': this.path+'delete/'+this.indexName+'?objectID='+objectID+'&API_KEY='+this.apiKey,
             'headers': {
               'Content-Type': 'application/json'
             }    
