@@ -21,9 +21,7 @@ class WalkoverSearch {
      * @param {string} type The type of index, it can be Simple_Search or Ecommerce
      * @param {Function} callback(data) a callback function which accepts one argument
      */
-    createIndex(name, type, callback = null) {
-        x
-
+    addIndex(name, type, callback = null) {
         var options = {
             'method': 'POST',
             'url': this.path + 'addIndexByApi?name=' + name + '&type=' + type,
