@@ -235,3 +235,4 @@ class WalkoverSearch {
 
 module.exports = { WalkoverSearch }
 
+module.exports.WalkoverSearch = {copyIndexConfiguration, addIndex}
