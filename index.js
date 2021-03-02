@@ -171,3 +171,4 @@ class WalkoverSearch {
     
 }
 
+module.exports = {WalkoverSearch}
