@@ -1,6 +1,6 @@
 {
   "name": "universal-search-engine-api",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Universal Search engine client api",
   "main": "index.js",
   "dependencies": {
