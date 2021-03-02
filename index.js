@@ -233,5 +233,5 @@ class WalkoverSearch {
 
 }
 
-module.exports = { WalkoverSearch, copyIndexConfiguration }
+module.exports = { WalkoverSearch }
 
