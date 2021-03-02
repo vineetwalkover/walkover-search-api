@@ -84,7 +84,7 @@ class WalkoverSearch {
     /**
      * @param {string} query query to be searched.
      * @param {Function} callback(data) a callback function which accepts one argument.
-     * @param {Object} parameters a dictionary which provides parameters size, userToken, preFilter, postFilters {{
+     * @param {Object} body a dictionary which provides parameters size, userToken, preFilter, postFilters {{
      *      size:int,
      *      userToken:string,
      *      preFilter:string,
@@ -92,7 +92,7 @@ class WalkoverSearch {
      * }}. 
      * @memberof WalkoverSearch
      */
-    search(query, callback = null, parameters = null) {
+    search(query, callback = null, body = null) {
         if (this.indexName == undefined) {
             throw new Error('Index not initialized\n call initIndex first')
         }
@@ -100,23 +100,23 @@ class WalkoverSearch {
         var url = this.path + 'search/' + this.indexName + '?query=' + query
         var jsonData = {}
 
-        if (parameters != null) {
-            if ('userToken' in parameters)
-                url += '&userToken=' + parameters['userToken']
+        if (body != null) {
+            if ('userToken' in body)
+                url += '&userToken=' + body['userToken']
 
-            if ('size' in parameters) {
-                url += '&size=' + parameters['size']
+            if ('size' in body) {
+                url += '&size=' + body['size']
             }
 
-            if ('postFilters' in parameters) {
-                jsonData['postFilter'] = parameters['postFilter']
+            if ('postFilters' in body) {
+                jsonData['postFilter'] = body['postFilter']
             }
 
-            if ('preFilter' in parameters) {
-                jsonData['preFilter'] = parameters['preFilter']
+            if ('preFilter' in body) {
+                jsonData['preFilter'] = body['preFilter']
             }
         }
-
+        console.log(url);
         var options = {
             'method': 'GET',
             'url': url,
@@ -247,3 +247,10 @@ class WalkoverSearch {
 }
 
 module.exports = { WalkoverSearch }
+
+client = new WalkoverSearch('ZTEsBf6qf7Ekog')
+client.initIndex('space_search')
+
+client.search('vi', function callback(data) {
+    console.log(data)
+})
