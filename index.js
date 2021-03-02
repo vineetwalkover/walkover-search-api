@@ -6,7 +6,7 @@ class WalkoverSearch {
      * @constructs
      */
     constructor(apiKey) {
-        this.apiKey = apiKey
+        this.apiKey = apiKey 
         this.path = 'https://search-engine-walkover.el.r.appspot.com/'
     }
 
@@ -248,9 +248,3 @@ class WalkoverSearch {
 
 module.exports = { WalkoverSearch }
 
-client = new WalkoverSearch('ZTEsBf6qf7Ekog')
-client.initIndex('space_search')
-
-client.search('vi', function callback(data) {
-    console.log(data)
-})
