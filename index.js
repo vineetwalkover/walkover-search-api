@@ -2,7 +2,8 @@ const request = require('request');
 
 class WalkoverSearch {
     /**
-     * @param {string} apiKey The api key avaialable on home page
+     * @param {string} apiKey The api key.
+     * @constructs
      */
     constructor(apiKey) {
         this.apiKey = apiKey
@@ -10,16 +11,18 @@ class WalkoverSearch {
     }
 
     /**
-     * @param {string} indexName name of index
+     * @param {string} indexName name of index.
+     * @memberof WalkoverSearch
      */
     initIndex(indexName) {
         this.indexName = indexName
     }
 
     /**
-     * @param {string} name The name of index
-     * @param {string} type The type of index, it can be Simple_Search or Ecommerce
-     * @param {Function} callback(data) a callback function which accepts one argument
+     * @param {string} name The name of index.
+     * @param {string} type The type of index, it can be Simple_Search or Ecommerce.
+     * @param {Function} callback(data) a callback function which accepts one argument.
+     * @memberof WalkoverSearch
      */
     addIndex(name, type, callback = null) {
         var options = {
@@ -37,9 +40,10 @@ class WalkoverSearch {
     }
 
     /**
-     * @param {string} sourceIndex The name of source index 
-     * @param {string} targetIndex The name of target index
-     * @param {Function} callback(data) a callback function which accepts one argument
+     * @param {string} sourceIndex The name of source index.
+     * @param {string} targetIndex The name of target index.
+     * @param {Function} callback(data) a callback function which accepts one argument.
+     * @memberof WalkoverSearch
      */
     copyIndexConfiguration(sourceIndex, targetIndex, callback = null) {
         var options = {
@@ -57,8 +61,9 @@ class WalkoverSearch {
     }
 
     /**
-     * @param {string} index The name of index 
-     * @param {Function} callback(data) a callback function which accepts one argument
+     * @param {string} index The name of index .
+     * @param {Function} callback(data) a callback function which accepts one argument.
+     * @memberof WalkoverSearch
      */
     deleteIndex(index, callback = null) {
         var options = {
@@ -77,14 +82,15 @@ class WalkoverSearch {
     }
 
     /**
-     * @param {string} query query to be searched
-     * @param {Function} callback(data) a callback function which accepts one argument
+     * @param {string} query query to be searched.
+     * @param {Function} callback(data) a callback function which accepts one argument.
      * @param {Object} parameters a dictionary which provides parameters size, userToken, preFilter, postFilters {{
      *      size:int,
      *      userToken:string,
      *      preFilter:string,
      *      postFilters:object 
-     * }} 
+     * }}. 
+     * @memberof WalkoverSearch
      */
     search(query, callback = null, parameters = null) {
         if (this.indexName == undefined) {
@@ -128,8 +134,9 @@ class WalkoverSearch {
     }
 
     /**
-     * @param {object} object a dictionary object
-     * @param {Function} callback(data) a callback function which accepts one argument
+     * @param {object} object a dictionary object.
+     * @param {Function} callback(data) a callback function which accepts one argument.
+     * @memberof WalkoverSearch
      */
     addObject(object, callback = null) {
         if (this.indexName == undefined) {
@@ -153,8 +160,9 @@ class WalkoverSearch {
     }
 
     /**
-     * @param {string} objectID objectID of the data to be deleted
-     * @param {Function} callback(data) a callback function which accepts one argument
+     * @param {string} objectID objectID of the data to be deleted.
+     * @param {Function} callback(data) a callback function which accepts one argument.
+     * @memberof WalkoverSearch
      */
     deleteObject(objectID, callback = null) {
         if (this.indexName == undefined) {
@@ -176,8 +184,9 @@ class WalkoverSearch {
     }
 
     /**
-     * @param {object} objectsList a list of dictionary objects
-     * @param {Function} callback(data) a callback function which accepts one argument
+     * @param {object} objectsList a list of dictionary objects.
+     * @param {Function} callback(data) a callback function which accepts one argument.
+     * @memberof WalkoverSearch
      */
     addObjects(objectsList, callback = null) {
         if (this.indexName == undefined) {
@@ -202,14 +211,15 @@ class WalkoverSearch {
     }
 
     /**
-     * @param {string} type type of event(example: click)
+     * @param {string} type type of event(example: click).
      * @param {object} parameters a dictionary object which provides objectIDs of
      * objectClickedOn, and clickedByUser
      * {{
      *      "objectClickedOn":string,
      *      "clickedByUser":string
-     * }}
-     * @param {Function} callback(data) a callback function which accepts one argument
+     * }}.
+     * @param {Function} callback(data) a callback function which accepts one argument.
+     * @memberof WalkoverSearch
      */
     event(type, parameters, callback = null) {
         if (this.indexName == undefined) {
@@ -237,7 +247,3 @@ class WalkoverSearch {
 }
 
 module.exports = { WalkoverSearch }
-
-console.log(typeof [{
-    "title": ""
-}])
