@@ -14,10 +14,7 @@ class WalkoverSearch {
         
         var options = {
             'method': 'POST',
-            'url': this.path + 'addIndexByApi?name='+ name +'&type=' + type,
-            'headers': {
-                'API_KEY': this.apiKey
-            }
+            'url': this.path + 'addIndexByApi?name='+ name +'&type=' + type+'&API_KEY='+this.apiKey           
         };
         request(options, function(error, response) {
             if (error) throw new Error(error);
@@ -29,10 +26,7 @@ class WalkoverSearch {
     copyIndexConfiguration(sourceIndex, targetIndex, callback=null) {
         var options = {
             'method': 'POST',
-            'url': this.path+'copyIndexConfig?src='+ sourceIndex +'&dest=' + targetIndex,
-            'headers': {
-                'API_KEY': this.apiKey
-            }
+            'url': this.path+'copyIndexConfig?src='+ sourceIndex +'&dest=' + targetIndex+'&API_KEY='+this.apiKey
         };
         request(options, function(error, response) {
             if (error) throw new Error(error);
@@ -44,9 +38,8 @@ class WalkoverSearch {
     deleteIndex(index, callback=null) {
         var options = {
             'method': 'DELETE',
-            'url': this.path + 'deleteIndexByApi?index='+index,
+            'url': this.path + 'deleteIndexByApi?index='+index+'&API_KEY='+this.apiKey,
             'headers': {
-              'API_KEY': this.apiKey,
               'Content-Type': 'application/json'
             }
         };
@@ -62,7 +55,7 @@ class WalkoverSearch {
             throw new Error('Index not initialized\n call initIndex first')
         }
         
-        var url = this.path + 'search/'+ this.indexName + '?query=' + query
+        var url = this.path + 'search/'+ this.indexName + '?query=' + query+'&API_KEY='+this.apiKey
         var jsonData = {}
 
         if (parameters != null) {
@@ -86,7 +79,6 @@ class WalkoverSearch {
             'method': 'GET',
             'url': url,
             'headers': {
-                'API_KEY': this.apiKey,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(jsonData)
@@ -102,9 +94,8 @@ class WalkoverSearch {
         var jsonData = JSON.stringify(object)
         var options = {
             'method': 'POST',
-            'url': this.path+'add/'+this.indexName,
+            'url': this.path+'add/'+this.indexName+'?API_KEY='+this.apiKey,
             'headers': {
-                'API_key': this.apiKey,
                 'Content-Type': 'application/json'
             },
         body: JSON.stringify(jsonData)
@@ -118,9 +109,8 @@ class WalkoverSearch {
     deleteData(objectId, callback=null){
         var options = {
             'method': 'DELETE',
-            'url': this.path+'delete/'+this.indexName+'?objectID='+objectId,
+            'url': this.path+'delete/'+this.indexName+'?objectID='+objectId+'&API_KEY='+this.apiKey,
             'headers': {
-              'API_key': this.apiKey,
               'Content-Type': 'application/json'
             }    
           };
@@ -135,9 +125,8 @@ class WalkoverSearch {
         var jsonData = JSON.stringify(objectsList)
         var options = {
             'method': 'POST',
-            'url': this.path + 'bulkadd/'+this.indexName,
+            'url': this.path + 'bulkadd/'+this.indexName+'?API_KEY='+this.apiKey,
             'headers': {
-                'API_key': this.apiKey,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(jsonData)
@@ -154,9 +143,8 @@ class WalkoverSearch {
         var jsonData = parameters
         var options = {
             'method': 'POST',
-            'url': url+'/event/'+this.indexName+'?type='+type,
+            'url': url+'/event/'+this.indexName+'?type='+type+'&API_KEY='+this.apiKey,
             'headers': {
-              'API_key': this.apiKey,
               'Content-Type': 'application/json'
             },
             body: JSON.stringify(jsonData)
