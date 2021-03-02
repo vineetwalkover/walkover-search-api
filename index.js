@@ -111,7 +111,7 @@ class WalkoverSearch {
         }
         console.log(url);
         var options = {
-            'method': 'GET',
+            'method': 'POST',
             'url': url,
             'headers': {
                 'Content-Type': 'application/json'
@@ -236,3 +236,17 @@ class WalkoverSearch {
 
 module.exports = { WalkoverSearch }
 
+
+var searchClient = new WalkoverSearch('ZTEsBf6qf7Ekog');
+searchClient.initIndex('space_search');
+// searchClient.search('click',{'objectClickedOn':'1312313','clickedByUser':'123311414'} ,function(result){
+//     console.log(result);
+// })
+searchClient.search('vi', callback= function(data) {
+    console.log(data)
+    }, 
+    body = {
+        'size': 15,
+        'userToken': 'U986',
+        'preFilter': "doc['type.keyword'].value=='U' && doc['_id'].value != 'U78'",        
+})

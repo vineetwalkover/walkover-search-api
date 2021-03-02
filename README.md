@@ -85,12 +85,16 @@ searchClient.deleteObject(1, function(data) {
 ```
 
 ### Search 
-This is the main function where search will be perform 
+first initialize index<br>
+```
+searchClient.initIndex('test')
+```
+This is the main function where search will be perform <br>
 
-syntax: syntax: searchClient.addObjects(<query>, <callback function>, <parameters>)
+syntax: syntax: searchClient.addObjects(query, callbackFunction>, parameters)<br>
 
-query : Now here query will be the main query that we want the search to be done on.
-parameters : It will be a json obejct that will contain following information :- 
+query : Now here query will be the main query that we want the search to be done on.<br>
+parameters : It will be a json obejct that will contain following information :- <br>
 ```
   parameters = {
          'size': 15,
@@ -100,11 +104,11 @@ parameters : It will be a json obejct that will contain following information :-
          })
 ```
   a) size : here size will define the total count of the result that will be returned matching 
-    the query. It can take value between 0 -1000.
+    the query. It can take value between 0 -1000.<br>
   b) userToken : This value is to pass when there is personalization. this denotes the user that used 
-    the search.
-  c) preFilter : The value of the prefilter is used to filter out the result to get the desired output.
-  d) postFilter :
+    the search.<br>
+  c) preFilter : The value of the prefilter is used to filter out the result to get the desired output.<br>
+  d) postFilter :<br>
 
 Example :- 
   ```
@@ -121,18 +125,18 @@ searchClient.search('vi', callback= function(data) {
 In this example 'vi' is the query whose search has to be done, callback function will display result and
 in parameter size is of 15 that is only 15 results to be returned, userToken is 'U986' that  is search is 
 done by this user whose id is 'U986', prefilter ensuring only that result containing only U in the id and
-this own user is not included.
+this own user is not included.<br>
 
 ### Copy Configuration from one index to another
-This function is used to copy configuratioed appiled on one index to another index.
+This function is used to copy configuratioed appiled on one index to another index.<br>
 
-syntax : copyIndexConfiguration(<sourceIndex>, <targetIndex>, <callback function>)
+syntax : copyIndexConfiguration(sourceIndex, targetIndex, callback function)<br>
 
-Here, 
-sourceIndex : it is the index name from where the configuration is to be copied.
-targetIndex : it is the index to which configuration is applied that is copied from sourceIndex.
+Here, <br>
+sourceIndex : it is the index name from where the configuration is to be copied.<br>
+targetIndex : it is the index to which configuration is applied that is copied from sourceIndex.<br>
 
-Example,
+Example,<br>
 ```
 searchClient.copyIndexConfiguration(testIndex1,textIndex2,function(result){
     console.log(result)
@@ -141,20 +145,24 @@ searchClient.copyIndexConfiguration(testIndex1,textIndex2,function(result){
 ```
 
 ### Event 
-This function is used to fire an event that will help in personalization.
+first initialize index<br>
+```
+searchClient.initIndex('test')
+```
+This function is used to fire an event that will help in personalization.<br>
 
-syntax :  event(<type>, <parameters>, <callback function>)
+syntax :  event(type, parameters, callbackFunction)<br>
 
 Here, 
-type : it denotes which type of event , e.g. 'click' event.
-parameters : It will be a json object which will contain 2 requied fields :-
-    a) objectClickedOn : This is the object id of the item that is clicked by the user.
-    b) clickedByUser: This is the id of the used who clicked the item.
+type : it denotes which type of event , e.g. 'click' event.<br>
+parameters : It will be a json object which will contain 2 requied fields :-<br>
+    a) objectClickedOn : This is the object id of the item that is clicked by the user.<br>
+    b) clickedByUser: This is the id of the used who clicked the item.<br>
 
-Example,
+Example,<br>
 
 ```
-searchClient.event('clicked', parameters = {'objectClickedOn': 'U279','clickedByUser': 'U89'}, function(result){
+searchClient.event('click', parameters = {'objectClickedOn': 'U279','clickedByUser': 'U89'}, function(result){
     console.log(result);
 })
 
