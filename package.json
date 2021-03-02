@@ -1,0 +1,14 @@
+{
+  "name": "walkover-search-api",
+  "version": "1.0.0",
+  "description": "A javascript API for walkover universal search engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
