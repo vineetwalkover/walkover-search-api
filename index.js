@@ -102,7 +102,7 @@ class WalkoverSearch {
             }
 
             if ('postFilters' in body) {
-                jsonData['postFilter'] = body['postFilter']
+                jsonData['postFilters'] = body['postFilters']
             }
 
             if ('preFilter' in body) {

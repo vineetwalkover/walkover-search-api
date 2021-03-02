@@ -91,16 +91,16 @@ searchClient.initIndex('test')
 ```
 This is the main function where search will be perform <br>
 
-syntax: syntax: searchClient.addObjects(query, callbackFunction>, parameters)<br>
+syntax:searchClient.addObjects(query, callbackFunction, body)<br>
 
 query : Now here query will be the main query that we want the search to be done on.<br>
 parameters : It will be a json obejct that will contain following information :- <br>
 ```
-  parameters = {
+  body = {
          'size': 15,
          'userToken': 'U986',
          'preFilter': "doc['type.keyword'].value=='U' && doc['_id'].value != 'U78'"
-         'postFilter':
+         'postFilters':
          })
 ```
   a) size : here size will define the total count of the result that will be returned matching 
@@ -108,17 +108,21 @@ parameters : It will be a json obejct that will contain following information :-
   b) userToken : This value is to pass when there is personalization. this denotes the user that used 
     the search.<br>
   c) preFilter : The value of the prefilter is used to filter out the result to get the desired output.<br>
-  d) postFilter :<br>
+  d) postFilters :<br>
 
 Example :- 
   ```
 searchClient.search('vi', callback= function(data) {
      console.log(data)
     }, 
-     parameters = {
+     body = {
          'size': 15,
          'userToken': 'U986',
-         'preFilter': "doc['type.keyword'].value=='U' && doc['_id'].value != 'U78'"
+         'preFilter': "doc['type.keyword'].value=='U' && doc['_id'].value != 'U78'",
+         'postFilters': {
+                "field1":["value1", "value2"],
+                "field2":["value3", "value4"]
+            }
          })
 
   ```
@@ -126,6 +130,7 @@ In this example 'vi' is the query whose search has to be done, callback function
 in parameter size is of 15 that is only 15 results to be returned, userToken is 'U986' that  is search is 
 done by this user whose id is 'U986', prefilter ensuring only that result containing only U in the id and
 this own user is not included.<br>
+Post filter ensures that the results are matched with give fields and values, and filter is applied after the aggregation.
 
 ### Copy Configuration from one index to another
 This function is used to copy configuratioed appiled on one index to another index.<br>
