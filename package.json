@@ -4,6 +4,7 @@
   "description": "Universal Search engine client api",
   "license": "ISC",
   "main": "src/index.js",
+  "types": "src/universal-search-engine-api.d.ts",
   "scripts": {
     "test": "mocha --recursive"
   },
@@ -36,3 +37,11 @@
   },
   "homepage": "https://github.com/vineetwalkover/walkover-search-api#readme"
 }
+,
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist"
+  }
