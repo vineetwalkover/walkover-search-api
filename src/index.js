@@ -25,7 +25,7 @@
   'use strict';
 
   /**
-   * universal_search_engine_api.<br>
+   * universal-search-engine-api_api.<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:

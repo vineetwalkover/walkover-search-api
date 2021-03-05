@@ -25,7 +25,7 @@ Add Index by Api, provide name and type for creating new index
 
 ### Example
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var apiInstance = new UniversalSearchEngine.WalkoverSearch();
 
@@ -67,7 +67,7 @@ It rquire a json object which we want to add.
 
 ### Example
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var apiInstance = new UniversalSearchEngine.WalkoverSearch();
 
@@ -126,7 +126,7 @@ It rquire a json array of objects which we want to add.
 
 ### Example
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var apiInstance = new UniversalSearchEngine.WalkoverSearch();
 
@@ -179,7 +179,7 @@ Copy Index Configuration, provide src and dest for copying index configuration
 
 ### Example
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var apiInstance = new UniversalSearchEngine.WalkoverSearch();
 
@@ -232,7 +232,7 @@ Delete Index, provide name
 
 ### Example
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var apiInstance = new UniversalSearchEngine.WalkoverSearch();
 
@@ -282,7 +282,7 @@ this require an objectID of object to be deleted
 
 ### Example
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var apiInstance = new UniversalSearchEngine.WalkoverSearch();
 
@@ -335,7 +335,7 @@ event type should be provided and it shoulb be click.
 
 ### Example
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var apiInstance = new UniversalSearchEngine.WalkoverSearch();
 
@@ -391,7 +391,7 @@ Get All objects stored in index, limit is 1000
 
 ### Example
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var apiInstance = new UniversalSearchEngine.WalkoverSearch();
 
@@ -441,7 +441,7 @@ Returns a list of stuff
 
 ### Example
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var apiInstance = new UniversalSearchEngine.WalkoverSearch();
 

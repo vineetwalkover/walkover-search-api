@@ -1,6 +1,6 @@
-# universal_search_engine
+# universal-search-engine-api
 
-UniversalSearchEngine - JavaScript client for universal_search_engine
+UniversalSearchEngine - JavaScript client for universal-search-engine-api
 universal search engine api
 
 
@@ -33,13 +33,13 @@ Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the follow
 npm link
 ```
 
-Finally, switch to the directory you want to use your universal_search_engine from, and run:
+Finally, switch to the directory you want to use your universal-search-engine-api from, and run:
 
 ```shell
 npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
 ```
 
-You should now be able to `require('universal_search_engine')` in javascript files from the directory you ran the last 
+You should now be able to `require('universal-search-engine-api')` in javascript files from the directory you ran the last 
 command above from.
 
 #### git
@@ -88,7 +88,7 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var UniversalSearchEngine = require('universal_search_engine');
+var UniversalSearchEngine = require('universal-search-engine-api');
 
 var api = new UniversalSearchEngine.WalkoverSearch()
 
