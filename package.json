@@ -37,11 +37,3 @@
   },
   "homepage": "https://github.com/vineetwalkover/walkover-search-api#readme"
 }
-,
-  "include": ["src/**/*"],
-  "compilerOptions": {
-    "allowJs": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "outDir": "dist"
-  }
