@@ -35,5 +35,9 @@
   "bugs": {
     "url": "https://github.com/vineetwalkover/walkover-search-api/issues"
   },
-  "homepage": "https://github.com/vineetwalkover/walkover-search-api#readme"
+  "homepage": "https://github.com/vineetwalkover/walkover-search-api#readme",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  }
 }
