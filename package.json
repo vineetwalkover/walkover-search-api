@@ -1,0 +1,38 @@
+{
+  "name": "universal-search-engine-api",
+  "version": "2.0.0",
+  "description": "Universal Search engine client api",
+  "license": "ISC",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "querystring": "0.2.0",
+    "superagent": "3.7.0"
+  },
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "mocha": "^8.3.0",
+    "sinon": "1.17.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vineetwalkover/walkover-search-api.git"
+  },
+  "keywords": [
+    "universal",
+    "search",
+    "engine",
+    "client",
+    "api"
+  ],
+  "author": "Vineet Atlani",
+  "bugs": {
+    "url": "https://github.com/vineetwalkover/walkover-search-api/issues"
+  },
+  "homepage": "https://github.com/vineetwalkover/walkover-search-api#readme"
+}
