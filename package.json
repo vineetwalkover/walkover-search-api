@@ -1,6 +1,6 @@
 {
   "name": "universal-search-engine-api",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "Universal Search engine client api",
   "license": "ISC",
   "main": "src/index.js",
