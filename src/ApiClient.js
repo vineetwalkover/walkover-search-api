@@ -27,10 +27,7 @@
     }
     root.UniversalSearchEngine.ApiClient = factory(root.superagent, root.querystring);
   }
-  var exports = function() {
-    this.ApiClient
-    this.UniversalSearchEngine
-  }
+  exports = factory(require('superagent'), require('querystring'));
 }(this, function(superagent, querystring) {
   'use strict';
 
