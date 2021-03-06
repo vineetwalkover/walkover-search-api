@@ -32,13 +32,13 @@
 
   /**
    * Default service.
-   * @module WalkoverSearch
+   * @module api/WalkoverSearch
    * @version 1.0.1
    */
 
   /**
    * Constructs a new WalkoverSearch. 
-   * @alias module:WalkoverSearch
+   * @alias module:api/WalkoverSearch
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the addIndex operation.
-     * @callback module:WalkoverSearch~addIndexCallback
+     * @callback module:api/WalkoverSearch~addIndexCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -61,7 +61,7 @@
      * @param {String} name name of index to be created
      * @param {String} type type of index, should be Simple_Search or Ecommerce
      * @param {String} API_KEY API_KEY for authentication
-     * @param {module:WalkoverSearch~addIndexCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WalkoverSearch~addIndexCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.addIndex = function(name, type, API_KEY, callback) {
@@ -111,7 +111,7 @@
 
     /**
      * Callback function to receive the result of the addObject operation.
-     * @callback module:WalkoverSearch~addObjectCallback
+     * @callback module:api/WalkoverSearch~addObjectCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -123,7 +123,7 @@
      * @param {String} indexName name of index
      * @param {String} API_KEY API_KEY for authentication
      * @param {Object} _object This is the single object to be add in index.
-     * @param {module:WalkoverSearch~addObjectCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WalkoverSearch~addObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.addObject = function(indexName, API_KEY, _object, callback) {
@@ -172,7 +172,7 @@
 
     /**
      * Callback function to receive the result of the addObjects operation.
-     * @callback module:WalkoverSearch~addObjectsCallback
+     * @callback module:api/WalkoverSearch~addObjectsCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -184,7 +184,7 @@
      * @param {String} indexName name of index
      * @param {String} API_KEY API_KEY for authentication
      * @param {Array.<module:model/Object>} objectsList This is the single object to be add in index.
-     * @param {module:WalkoverSearch~addObjectsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WalkoverSearch~addObjectsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.addObjects = function(indexName, API_KEY, objectsList, callback) {
@@ -233,7 +233,7 @@
 
     /**
      * Callback function to receive the result of the copyIndexConfig operation.
-     * @callback module:WalkoverSearch~copyIndexConfigCallback
+     * @callback module:api/WalkoverSearch~copyIndexConfigCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -245,7 +245,7 @@
      * @param {String} API_KEY API_KEY for authentication
      * @param {String} src Source Index
      * @param {String} dest Target Index
-     * @param {module:WalkoverSearch~copyIndexConfigCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WalkoverSearch~copyIndexConfigCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.copyIndexConfig = function(API_KEY, src, dest, callback) {
@@ -295,7 +295,7 @@
 
     /**
      * Callback function to receive the result of the deleteIndex operation.
-     * @callback module:WalkoverSearch~deleteIndexCallback
+     * @callback module:api/WalkoverSearch~deleteIndexCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -306,7 +306,7 @@
      * Delete Index, provide name
      * @param {String} index name of index to be deleted
      * @param {String} API_KEY API_KEY for authentication
-     * @param {module:WalkoverSearch~deleteIndexCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WalkoverSearch~deleteIndexCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.deleteIndex = function(index, API_KEY, callback) {
@@ -350,7 +350,7 @@
 
     /**
      * Callback function to receive the result of the deleteObject operation.
-     * @callback module:WalkoverSearch~deleteObjectCallback
+     * @callback module:api/WalkoverSearch~deleteObjectCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -362,7 +362,7 @@
      * @param {String} indexName name of index
      * @param {String} API_KEY API_KEY for authentication
      * @param {String} objectID objectId of the object to be deleted
-     * @param {module:WalkoverSearch~deleteObjectCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WalkoverSearch~deleteObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.deleteObject = function(indexName, API_KEY, objectID, callback) {
@@ -412,7 +412,7 @@
 
     /**
      * Callback function to receive the result of the generateEvent operation.
-     * @callback module:WalkoverSearch~generateEventCallback
+     * @callback module:api/WalkoverSearch~generateEventCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -425,7 +425,7 @@
      * @param {String} API_KEY API_KEY for authentication
      * @param {String} type type of the event
      * @param {module:Object1} _object This is the single object to be add in index.
-     * @param {module:WalkoverSearch~generateEventCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WalkoverSearch~generateEventCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.generateEvent = function(indexName, API_KEY, type, _object, callback) {
@@ -480,7 +480,7 @@
 
     /**
      * Callback function to receive the result of the getAllObjects operation.
-     * @callback module:WalkoverSearch~getAllObjectsCallback
+     * @callback module:api/WalkoverSearch~getAllObjectsCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -491,7 +491,7 @@
      * Get All objects stored in index, limit is 1000
      * @param {String} index 
      * @param {String} API_KEY API_KEY for authentication
-     * @param {module:WalkoverSearch~getAllObjectsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WalkoverSearch~getAllObjectsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.getAllObjects = function(index, API_KEY, callback) {
@@ -535,7 +535,7 @@
 
     /**
      * Callback function to receive the result of the searchQuery operation.
-     * @callback module:WalkoverSearch~searchQueryCallback
+     * @callback module:api/WalkoverSearch~searchQueryCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -550,7 +550,7 @@
      * @param {Number} opts.size maximum number of results to be returned
      * @param {Number} opts.userToken userToken for personalization
      * @param {module:SearchParameters} opts.searchParameters The user to create.
-     * @param {module:WalkoverSearch~searchQueryCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/WalkoverSearch~searchQueryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.searchQuery = function(indexName, query, API_KEY, opts, callback) {
