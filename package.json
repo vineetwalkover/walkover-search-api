@@ -1,6 +1,6 @@
 {
   "name": "universal-search-engine-api",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "universal-search-engine-api",
   "license": "Unlicense",
   "main": "src/index.js",
