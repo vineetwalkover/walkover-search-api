@@ -78,21 +78,19 @@ api.addIndex(name, type, API_KEY, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://search-engine-walkover.el.r.appspot.com*
-
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addIndex**](SearchApi.md#addIndex) | **POST** /addIndexByApi | Add Index By Api
-[**addObject**](SearchApi.md#addObject) | **POST** /add/{index_name} | This will add an object to the given index.
-[**addObjects**](SearchApi.md#addObjects) | **POST** /bulkadd/{index_name} | This will add an array of objects to the given index.
-[**copyIndexConfig**](SearchApi.md#copyIndexConfig) | **POST** /copyIndexConfig | Copy Index configuration from one index to another
-[**deleteAllData**](SearchApi.md#deleteAllData) | **DELETE** /deleteAllData/{index_name} | Delete Index
-[**deleteIndex**](SearchApi.md#deleteIndex) | **DELETE** /deleteIndexByApi | Delete Index
-[**deleteObject**](SearchApi.md#deleteObject) | **DELETE** /delete/{index_name} | This will delete the object with given object id
-[**generateEvent**](SearchApi.md#generateEvent) | **POST** /event/{index_name} | This will generate an event.
-[**getAllIndices**](SearchApi.md#getAllIndices) | **GET** /getAllIndices | Get all Indices
-[**getAllObjects**](SearchApi.md#getAllObjects) | **POST** /getAllObjects | Get All objects stored in index
-[**searchQuery**](SearchApi.md#searchQuery) | **POST** /search/{index_name} | Search for a query in an index
+[**addIndex**](docs/SearchApi.md#addIndex) | **POST** /addIndexByApi | Add Index By Api
+[**addObject**](docs/SearchApi.md#addObject) | **POST** /add/{index_name} | This will add an object to the given index.
+[**addObjects**](docs/SearchApi.md#addObjects) | **POST** /bulkadd/{index_name} | This will add an array of objects to the given index.
+[**copyIndexConfig**](docs/SearchApi.md#copyIndexConfig) | **POST** /copyIndexConfig | Copy Index configuration from one index to another
+[**deleteAllData**](docs/SearchApi.md#deleteAllData) | **DELETE** /deleteAllData/{index_name} | Delete Index
+[**deleteIndex**](docs/SearchApi.md#deleteIndex) | **DELETE** /deleteIndexByApi | Delete Index
+[**deleteObject**](docs/SearchApi.md#deleteObject) | **DELETE** /delete/{index_name} | This will delete the object with given object id
+[**generateEvent**](docs/SearchApi.md#generateEvent) | **POST** /event/{index_name} | This will generate an event.
+[**getAllIndices**](docs/SearchApi.md#getAllIndices) | **GET** /getAllIndices | Get all Indices
+[**getAllObjects**](docs/SearchApi.md#getAllObjects) | **POST** /getAllObjects | Get All objects stored in index
+[**searchQuery**](docs/SearchApi.md#searchQuery) | **POST** /search/{index_name} | Search for a query in an index
 
 
 ## Documentation for Models
