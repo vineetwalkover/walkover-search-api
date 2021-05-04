@@ -46,9 +46,9 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://search-engine-walkover.el.r.appspot.com
+     * @default https://delve-api.intospace.io/
      */
-    this.basePath = 'https://search-engine-walkover.el.r.appspot.com'.replace(/\/+$/, '');
+    this.basePath = 'https://delve-api.intospace.io/'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
